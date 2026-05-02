@@ -4,4 +4,8 @@
 **.venv
 **.pdf
 uscis-sms-evidence/excluded.txt
-output/sms_excluded_log.txt
+output/*
+!output/.gitkeep
+data/*
+!data/.gitkeep
+__pycache__
