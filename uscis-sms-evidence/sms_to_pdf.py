@@ -363,8 +363,8 @@ def build_pdf(messages, output_pdf, your_name, spouse_name, spouse_phone,
     story.append(Spacer(1, 0.3 * inch))
 
     cover_data = [
-        ["Petitioner / Applicant:", your_name],
-        ["Spouse / Beneficiary:", spouse_name],
+        ["Petitioner / Applicant:", spouse_name],
+        ["Spouse / Beneficiary:", your_name],
         ["Contact Number:", spouse_phone],
         ["Date Range:",
          f"{start_date or 'All'} to {end_date or 'Present'}"],
