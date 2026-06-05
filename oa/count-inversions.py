@@ -30,12 +30,12 @@ import hashlib
 # === YOUR SOLUTION =================================================
 from typing import Tuple
 def solve(nums: List[int]) -> int:
-    def merge_sort(array: List[int], count) -> Tuple[list, int]:
+    def merge_sort(array: List[int]) -> Tuple[list, int]:
         if len(array) > 1:
             # Divide
             split = len(array) // 2
-            left_sorted, left_count = merge_sort(array[0:split], count)
-            right_sorted, right_count = merge_sort(array[split:], count)
+            left_sorted, left_count = merge_sort(array[0:split])
+            right_sorted, right_count = merge_sort(array[split:])
             # Conquer
             return_array = []
             i,j, count = 0, 0, left_count + right_count
@@ -54,7 +54,7 @@ def solve(nums: List[int]) -> int:
             return return_array, count
         else:
             return array, 0
-    _, count = merge_sort(nums, 0)
+    _, count = merge_sort(nums)
     return count
 
 
